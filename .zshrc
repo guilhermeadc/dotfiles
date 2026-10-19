@@ -113,11 +113,10 @@ source $ZSH/oh-my-zsh.sh
 eval "$(oh-my-posh init zsh)"
 
 # Configuração de aliases para comandos comuns
-alias vim="nvim"
 alias vi="nvim"
-alias oldvim="vim"
+alias vim="nvim"
+alias oldvim="command vi"
 alias vimdiff='nvim -d'
 
 # Configurações de variáveis de ambiente
 export EDITOR=nvim
-
