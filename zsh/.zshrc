@@ -76,7 +76,8 @@ unsetopt beep
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
+#plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,17 +107,31 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Oh My Posh configuration
 # eval "$(oh-my-posh init zsh)"
 
 # Configuração de aliases para comandos comuns
+## NVIM alias
 alias vi="nvim"
 alias vim="nvim"
 alias oldvim="command vi"
 alias vimdiff='nvim -d'
 
+## ZSH alias
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.zshrc.pre-oh-my-zsh"
+
+## Neovim 
+alias vi='NVIM_APPNAME=nvim-default nvim'
+alias vim='NVIM_APPNAME=nvim-default nvim'
+#alias nvim='NVIM_APPNAME=nvim-default nvim'
+alias lvim='NVIM_APPNAME=lazy-vim nvim'
+alias lazyvim='NVIM_APPNAME=lazy-vim nvim'
+
 # Configurações de variáveis de ambiente
+export NODE_EXTRA_CA_CERTS="/usr/local/share/ca-certificates/ca.petrobras.goskope.pem"
 export EDITOR=nvim
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
