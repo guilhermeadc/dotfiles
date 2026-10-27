@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Oh My Posh configuration
-eval "$(oh-my-posh init zsh)"
+# eval "$(oh-my-posh init zsh)"
 
 # Configuração de aliases para comandos comuns
 alias vi="nvim"
