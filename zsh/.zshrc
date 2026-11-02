@@ -121,6 +121,7 @@ alias vimdiff='nvim -d'
 ## ZSH alias
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.zshrc.pre-oh-my-zsh"
+alias tmuxconfig="nvim ~/.tmux.conf"
 
 ## Neovim 
 alias vi='NVIM_APPNAME=nvim-default nvim'
