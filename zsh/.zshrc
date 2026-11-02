@@ -131,7 +131,6 @@ alias lvim='NVIM_APPNAME=lazy-vim nvim'
 alias lazyvim='NVIM_APPNAME=lazy-vim nvim'
 
 # Configurações de variáveis de ambiente
-export NODE_EXTRA_CA_CERTS="/usr/local/share/ca-certificates/ca.petrobras.goskope.pem"
 export EDITOR=nvim
 
 # Configurações de NVM
@@ -139,8 +138,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 # Configurações de Dotnet
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
 
+# Configurações específicas desta máquina ficam fora do repositório.
+[[ -r "${ZDOTDIR:-$HOME}/.zshrc.local" ]] && source "${ZDOTDIR:-$HOME}/.zshrc.local"
