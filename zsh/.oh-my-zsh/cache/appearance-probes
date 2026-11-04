@@ -1,0 +1,1 @@
+__omz_probes=( 'diff --color /dev/null' '0' 'ls --color' '0' )
