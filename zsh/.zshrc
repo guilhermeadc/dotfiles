@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 # eval "$(oh-my-posh init zsh)"
 
 # Configurações de variáveis de ambiente
-export EDITOR=nvim
+export EDITOR=vim
 
 # Configurações de NVM
 export NVM_DIR="$HOME/.nvm"
