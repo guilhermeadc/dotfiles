@@ -33,7 +33,7 @@ ZSH_THEME="steeef"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change the frequency the auto-updater is run (in days).
-zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 30
 
 # Uncomment the following line to set how old an update must be before it's applied, manually or via the auto-updater (in days).
 # zstyle ':omz:update' cooldown 10
@@ -102,21 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-
 # Oh My Posh configuration
 # eval "$(oh-my-posh init zsh)"
 
-# Configurações de variáveis de ambiente
-export EDITOR=vim
+# Configurações do editor
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
+# Aliases versionados, independentes do diretório do Oh My Zsh.
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases.zsh"
 
 # Configurações de NVM
 export NVM_DIR="$HOME/.nvm"
@@ -125,3 +119,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Configurações específicas desta máquina ficam fora do repositório.
 [[ -r "${ZDOTDIR:-$HOME}/.zshrc.local" ]] && source "${ZDOTDIR:-$HOME}/.zshrc.local"
+
+# Configuracoes de carregamento do Cargo
+export PATH=$HOME/.cargo/bin:$PATH
+
